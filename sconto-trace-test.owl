@@ -1,0 +1,1516 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#"
+     xml:base="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:SCOPRO="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace">
+        <owl:imports rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#entails_inf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#entails_inf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#isEntailedBy_inf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Utilization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#involves_inf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#involves_inf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#isInvolvedIn_inf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Resource_Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#isEntailedBy_inf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#isEntailedBy_inf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#isInvolvedIn_inf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#isInvolvedIn_inf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#outputOf_inf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#outputOf_inf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TraceableItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#uses_Process_inf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#uses_Process_inf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/2.1/schema/qudt#ends -->
+
+    <owl:DatatypeProperty rdf:about="http://qudt.org/2.1/schema/qudt#ends">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://qudt.org/2.1/schema/qudt#starts -->
+
+    <owl:DatatypeProperty rdf:about="http://qudt.org/2.1/schema/qudt#starts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Resource -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Resource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Resource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#LoadLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#LoadLocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Information_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#OrderDeliveryDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#OrderDeliveryDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Information_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcurementOrder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcurementOrder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Information_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Receive_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Receive_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#S_M-t-O_Product_Process_Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Schedule_Product_Deliveries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Schedule_Product_Deliveries">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#S_M-t-O_Product_Process_Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipingDocuments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipingDocuments">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Information_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TraceableItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TraceableItem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Resource"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#isProvidedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Supply_Chain"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Transfer_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Transfer_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#S_M-t-O_Product_Process_Element"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#API_Producer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#API_Producer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Independent_OU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#AndreL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#AndreL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Independent_OU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Receive_and_Verify_Product_by_Customer"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7_uses"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7_uses -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7_uses">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Use"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_pasObjRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE1_TempRel_DSUT_PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE1_TempRel_DSUT_PE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Composite_Temporal_Relationship"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_before"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_meets"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE1_TempRel_SSUT_PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE1_TempRel_SSUT_PE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Composite_Temporal_Relationship"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_during"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_equal"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE2_TempRel_DSUT_PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE2_TempRel_DSUT_PE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Before"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE2_TempRel__SSUT_PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE2_TempRel__SSUT_PE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Composite_Temporal_Relationship"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_during"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_equal"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE3_TempRel__DSUT_PE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE3_TempRel__DSUT_PE4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Composite_Temporal_Relationship"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_before"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_meets"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE4_TempRel__DSUT_PE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE4_TempRel__DSUT_PE5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Composite_Temporal_Relationship"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_before"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_meets"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE5_TempRel__DSUT_PE6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE5_TempRel__DSUT_PE6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Meets"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE6_TempRel__DSUT_PE7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE6_TempRel__DSUT_PE7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Meets"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Deliver_Stocked_Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvCT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvCT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Deliver_Stocked_Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Deliver_Make-to-Order_Product"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE1"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Receive_Enter_and_Validate_Order"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE1_TempRel_DSUT_PE2"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE1_TempRel_SSUT_PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Reserve_Inventory_and_Determine_Delivery_Date"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2_creates"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE2_TempRel_DSUT_PE3"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE2_TempRel__SSUT_PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2_creates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2_creates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Creation"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD_outRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2_modifies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2_modifies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Modification"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_ActRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2_uses -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2_uses">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Use"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_inRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Receive_Product_from_Source_or_Make"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3_creates"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3_moves"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE3_TempRel__DSUT_PE4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3_creates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3_creates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Creation"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location_outRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3_moves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3_moves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Movement"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load1RR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Pick_Product"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4_modifies"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE4_TempRel__DSUT_PE5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4_modifies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4_modifies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Modification"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location_ActRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4_moves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4_moves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Movement"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load2RR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Load_Product_and_Generate_Shipping_Docs"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5_creates"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE5_TempRel__DSUT_PE6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5_creates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5_creates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Creation"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDocs_outRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Ship_Product"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6_transports"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6_uses"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSUT_PE6_TempRel__DSUT_PE7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6_transports -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6_transports">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Transportation_"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load3RR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6_uses -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6_uses">
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDoc_inRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DrugstoreRetail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DrugstoreRetail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Customer_Role"/>
+        <SCOPRO:isORoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PGT_Pharmacy"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#FinishingPlant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#FinishingPlant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Plant"/>
+        <SCOPRO:isDestinationFacilityOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6_transports"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#FinishingPlantOU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#FinishingPlantOU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Dependent_OU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#IndPharmaLab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#IndPharmaLab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Independent_OU"/>
+        <SCOPRO:hasDependentOU rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#FinishingPlantOU"/>
+        <SCOPRO:hasDependentOU rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantOU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Make-to-Stock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimvCT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimvCT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Make-to-Stock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimvUT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimvUT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Make-to-Order"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Mercosur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Mercosur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Market"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PECreacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PECreacion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Element"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PEcreation_creates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PEcreation_creates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PEcreation_creates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Creation"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_matOutRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PGT_Pharmacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PGT_Pharmacy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Independent_OU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_DSimvUT_PE7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_PECreation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_PECreation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PECreacion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_SSimvUT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_SSimvUT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_SSimvUT-PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_SSimvUT-PE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_SSimvUT-PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_SSimvUT-PE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+        <SCOPRO:materializesProcess rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_SSimvUT-PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PO_SSimvUT-PE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PharmaTablesSCLog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PharmaTablesSCLog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#ThirdPL_Provider_Role"/>
+        <SCOPRO:isORoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#AndreL"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSImvUT_PE7"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimv"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvCT"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PharmaTabletsSC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PharmaTabletsSC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Supply_Chain"/>
+        <SCOPRO:hasMember rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DrugstoreRetail"/>
+        <SCOPRO:hasMember rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PharmaTablesSCLog"/>
+        <SCOPRO:hasMember rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvCoatedTabletsMaker"/>
+        <SCOPRO:hasMember rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUncoatedTabletsMaker"/>
+        <SCOPRO:hasMember rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvastatinAPIProduction"/>
+        <SCOPRO:isTargetedAt rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Mercosur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcurementOrder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_ActRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_ActRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Actualization"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_inRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_inRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Input"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_outRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_outRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Output"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSUT_PE1_TempRel__SSUT_PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSUT_PE1_TempRel__SSUT_PE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Before"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSUT_PE2_TempRel__SSUT_PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSUT_PE2_TempRel__SSUT_PE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Composite_Temporal_Relationship"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_before"/>
+        <SCOPRO:hasTempRelatAsPart rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_meets"/>
+        <SCOPRO:withRespectTo rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Source_Stocked_Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvCT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvCT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Source_Stocked_Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Source_Make-to-Order_Product"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2"/>
+        <SCOPRO:isComprisedOfPE rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Schedule_Product_Deliveries"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1_uses"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSUT_PE1_TempRel__SSUT_PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1_creates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1_creates">
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ProcOrder_outRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1_uses -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT-PE1_uses">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Use"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD_inRR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Receive_Product"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2_uses"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2_uses2"/>
+        <SCOPRO:isRestrainedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSUT_PE2_TempRel__SSUT_PE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2_uses -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2_uses">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Use"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDocs_in2RR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2_uses2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE2_uses2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Use"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_pasObj2RR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Transfer_Product"/>
+        <SCOPRO:entails rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE3_moves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE3_moves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT_PE3_moves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Movement"/>
+        <SCOPRO:involves rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load4RR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDoc_inRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDoc_inRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Input"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDocs_in2RR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDocs_in2RR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Input"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Ship_doc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDocs_outRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipDocs_outRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Output"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Ship_doc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Ship_doc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Ship_doc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#ShipingDocuments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvCoatedTabletsMaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvCoatedTabletsMaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Secondary_Producer_Role"/>
+        <SCOPRO:isORoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#FinishingPlantOU"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvCT"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimvCT"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Resource"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TraceableItem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load1RR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load1RR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Load"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load2RR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load2RR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Load"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load3RR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load3RR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Load"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load4RR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_load4RR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Load"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_matOutRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_matOutRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Output"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_pasObj2RR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_pasObj2RR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Passive_Object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_pasObjRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT_pasObjRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Passive_Object"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUncoatedTabletsMaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvUncoatedTabletsMaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Secondary_Producer_Role"/>
+        <SCOPRO:isORoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantOU"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimvUT"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SSimv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvastatinAPIProduction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#SimvastatinAPIProduction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Secondary_Producer_Role"/>
+        <SCOPRO:isORoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#API_Producer"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimv"/>
+        <SCOPRO:performs rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#MSimv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Plant"/>
+        <SCOPRO:isSourceFacilityOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE6_transports"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantLogisticDepartment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantLogisticDepartment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Logistics"/>
+        <SCOPRO:areaPerforms rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2"/>
+        <SCOPRO:areaPerforms rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3"/>
+        <SCOPRO:areaPerforms rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE4"/>
+        <SCOPRO:areaPerforms rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantOU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantOU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Dependent_OU"/>
+        <SCOPRO:hasFunctionalArea rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantLogisticDepartment"/>
+        <SCOPRO:hasFunctionalArea rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantSalesDepartment"/>
+        <SCOPRO:hasFunctionalArea rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Tablets_Manufacture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantSalesDepartment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TabletsPlantSalesDepartment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Sales"/>
+        <SCOPRO:areaPerforms rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2"/>
+        <SCOPRO:areaPerforms rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE3"/>
+        <SCOPRO:areaPerforms rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Tablets_Manufacture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#Tablets_Manufacture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Production"/>
+        <SCOPRO:areaPerforms rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#DSimvUT_PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_before -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_before">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Before"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_during -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_during">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#During"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_equal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_equal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Equal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_meets -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_meets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Meets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_overlaps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#atempRel_overlaps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Overlaps"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location">
+        <rdf:type rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#LoadLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location_ActRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location_ActRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Actualization"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location_outRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location_outRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Output"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#OrderDeliveryDate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD_inRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD_inRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Input"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD_outRR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD_outRR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Output"/>
+        <SCOPRO:isResourceRoleOf rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#orderDD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#20mg_Simv_tablets -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#20mg_Simv_tablets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Resource"/>
+        <SCOPRO:isProvidedBy rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#PharmaTabletsSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#mr">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#rr">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#po">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#ut">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#process">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#process"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Utilization"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#ut"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#materializesProcess"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#process"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#entails"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#process"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#ut"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#entails_inf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#ut"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Utilization"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#ut"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Resource_Role"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#rr"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#materializesProcess"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#process"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#entails_inf"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#ut"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#involves"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#ut"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#rr"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#involves_inf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#rr"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Resource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#mr"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#hasResourceRole"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#mr"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#rr"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Material_Output"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#rr"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#TraceableItem"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#mr"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#isInvolvedIn_inf"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#rr"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#po"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Process_Occurrence"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#entails_inf"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#po"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#ut"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fliabarcos/ontologies/2014/0/SCOPRO#Creation"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#ut"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/industrialOnto/ontologies/2024/10/SCONTO-Trace#outputOf_inf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#mr"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#po"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
